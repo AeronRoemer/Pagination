@@ -41,7 +41,13 @@ showPage(studentList, 1);
 ***/
 
 function appendPageLinks(list){
-  document.createElement('')
+   let div = document.createElement('div');
+   div.className('pagination');
+   let ul = document.createElement('ul');
+   div.appendChild('ul');
+   let li = document.createElement('li');
+   let a = document.createElement('a');
+
 };
 
 
