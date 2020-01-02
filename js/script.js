@@ -42,14 +42,34 @@ showPage(studentList, 1);
 
 function appendPageLinks(list){
    let div = document.createElement('div');
-   div.className('pagination');
+   div.className = 'pagination';
+   document.querySelector('.page').appendChild(div);
    let ul = document.createElement('ul');
-   div.appendChild('ul');
-   let li = document.createElement('li');
-   let a = document.createElement('a');
+   div.appendChild(ul);
+   let pages = list.length/10
+   for (let i = 0; i < pages; i++){
+     let listLink = document.createElement('li');
+     let link = document.createElement('a')
+     link.href = '#';
+     link.textContent = i+1;
+     ul.appendChild(listLink).appendChild(link);
+   }
+   let links = document.getElementsByTagName('a');
+   links[0].className = 'active'
 
+   for (let i = 0; i < links.length; i++){
+      links[i].addEventListener('click', (e) => {
+         for (let j = 0; j < links.length; j++){
+            links[j].classList.remove('active');
+         }
+         e.target.className = 'active';
+         showPage(studentList, (i+1));
+      })
+   };
 };
 
 
+
+appendPageLinks(studentList);
 
 // Remember to delete the comments that came with this file, and replace them with your own code comments.
