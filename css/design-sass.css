@@ -61,6 +61,10 @@ body {
   color: #F1AB86;
 }
 
+.student-item {
+  margin: 0;
+  padding: 5px;
+}
 .student-item:last-child {
   margin: 0;
   padding: 0;
@@ -73,9 +77,10 @@ body {
 }
 .pagination li {
   display: inline;
+  padding: 2px
 }
 .pagination li a {
-  border: 1px solid #F7F7F2;
+  border: 1px solid #F1AB86;
   border-radius: 6px;
   padding: 3px 8px;
   text-decoration: none;
