@@ -1,0 +1,92 @@
+// SASS variables for color and typeface 
+// numbered 1-5 / darkest to lightest
+$dark_5: #041F1E
+$dark_4: #1E2D2F
+$mid_3: #C57B57
+$light_2: #F1AB86
+$light_1: #F7F7F2
+
+$font-stack: 'Oswald', sans-serif
+
+// But this comment will, except in compressed mode.
+    
+body
+    background-color: $dark_5
+    font-family: $font-stack
+    color: $light_1
+
+page
+    margin: 50px auto
+    width: 65%
+    background-color: $dark_4
+    border-radius: 10px
+    padding: 45px
+
+.page-header
+    margin-botton: 30px
+    border-radius: 20px
+
+    h2
+      float: left
+      font-size: 30px
+      text-transform: uppercase
+      font-weight: bold
+      color: $mid_3
+
+.student-list
+    margin: 0 10px 10px 0
+    padding: 0 10px 10px 0
+    border-bottom: 2px dashed $light_2
+
+    .student-details
+        width: 50%
+        float: left 
+
+        .avatar
+            width: 40px
+            height: auto
+            border-radius: 30px
+            float: left
+            margin-right: 20px
+
+        .h3
+            margin: 4px 0 2px 0
+            font-weight: bold
+            color: $mid_3
+
+        .email
+            color: $light_2
+        
+    .joined-details
+        width: 50%
+        float: left
+        text-align: right
+
+        .date
+            margin-top: 15px
+            display: block
+            font-size: 14px
+            color: $light_2
+
+.student-item:last-child
+    margin: 0
+    padding: 0
+    border-bottom: none
+
+.pagination 
+    margin: 40px 0 0 0
+    text-align: center
+
+    li
+        display: inline
+
+        a   
+            border: 1px solid $light_1
+            border-radius: 6px
+            padding: 3px 8px
+            text-decoration: none
+            color: $mid_3
+
+        a.active, a:hover
+            background-color: $light_2
+            color: $dark_4
