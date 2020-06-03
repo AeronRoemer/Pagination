@@ -4,8 +4,9 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Students</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700,300&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/design.css">
+    <link rel="stylesheet" href="css/design-sass.css">
   </head>
   <body>
     <div class="page">
@@ -555,8 +556,7 @@
            </div>
         </li>
       </ul>
-      <!-- dynamically add pagination links here -->
-
+      <!-- Pagination links added via javascript-->
     </div>
     <script src="js/script.js"></script>
   </body>
