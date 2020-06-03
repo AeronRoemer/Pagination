@@ -1,4 +1,5 @@
 <!doctype html>
+<!-- HTML provided from teamtreehouse.com -->
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
@@ -11,7 +12,6 @@
     <div class="page">
       <div class="page-header cf">
         <h2>Students</h2>
-        <!-- dynamically insert search form here (optional) -->
 
       </div>
       <ul class="student-list">
