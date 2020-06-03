@@ -2,20 +2,7 @@
 Treehouse Techdegree:
 FSJS project 2 - List Filter and Pagination
 ******************************************/
-   
-// Study guide for this project - https://drive.google.com/file/d/1OD1diUsTMdpfMDv677TfL1xO2CEkykSz/view?usp=sharing
 
-
-/*** 
-   Add your global variables that store the DOM elements you will 
-   need to reference and/or manipulate. 
-   
-   But be mindful of which variables should be global and which 
-   should be locally scoped to one of the two main functions you're 
-   going to create. A good general rule of thumb is if the variable 
-   will only be used inside of a function, then it can be locally 
-   scoped to that function.
-***/
 
 const studentList = document.getElementsByClassName('student-item');
 
@@ -35,18 +22,18 @@ function showPage(list, page){
 
 showPage(studentList, 1);
 
-/*** 
-   Create the `appendPageLinks function` to generate, append, and add 
-   functionality to the pagination buttons.
-***/
+//creates HTML to append page buttons and link based on 10-item pages
 
 function appendPageLinks(list){
+   //variables used in the function
    let div = document.createElement('div');
    div.className = 'pagination';
    document.querySelector('.page').appendChild(div);
    let ul = document.createElement('ul');
    div.appendChild(ul);
    let pages = list.length/10
+   
+   //for loop iterates over pages and creates link anchors
    for (let i = 0; i < pages; i++){
      let listLink = document.createElement('li');
      let link = document.createElement('a')
@@ -56,7 +43,8 @@ function appendPageLinks(list){
    }
    let links = document.getElementsByTagName('a');
    links[0].className = 'active'
-
+   
+   //adds event listeners to links to display 'active' page
    for (let i = 0; i < links.length; i++){
       links[i].addEventListener('click', (e) => {
          for (let j = 0; j < links.length; j++){
@@ -68,8 +56,5 @@ function appendPageLinks(list){
    };
 };
 
-
-
+//calls above function and passes it a list of students accessed via a DOM reference. 
 appendPageLinks(studentList);
-
-// Remember to delete the comments that came with this file, and replace them with your own code comments.
