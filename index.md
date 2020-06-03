@@ -1,5 +1,5 @@
-<!doctype html>
 <!-- HTML provided from teamtreehouse.com -->
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
